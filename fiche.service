@@ -1,0 +1,8 @@
+[Unit]
+Description=FICHE-SERVER
+
+[Service]
+ExecStart=/usr/local/bin/fiche -d yank.gokmengorgen.net -o /home/ubuntu/yank/code -l /home/ubuntu/yank/log -u ubuntu
+
+[Install]
+WantedBy=multi-user.target
