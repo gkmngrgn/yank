@@ -1,6 +1,7 @@
 # YANK
 
-Personal terminal pastebin service. https://termbin.com/
+Personal terminal pastebin service. [Termbin](https://termbin.com/)
+clone.
 
     alias yank="nc localhost 3000"
 
@@ -11,15 +12,15 @@ Personal terminal pastebin service. https://termbin.com/
     http://localhost:3000/defg
 
 
+To run the server just type this command:
+
+    go run server.go
+
+
 ## REQUIREMENTS
 
 - Golang
 - and Golang.
-
-
-## INSTALLATION
-
-    sudo apt install fiche
 
 
 ## TODO
