@@ -3,24 +3,29 @@
 Personal terminal pastebin service. [Termbin](https://termbin.com/)
 clone.
 
-    alias yank="nc localhost 3000"
+```shell
+# run server
+$ yank server
 
-    echo "merhaba, ömürcan!" | yank
-    http://localhost:3000/abcd
+# send text
+$ yank url https://gokmengorgen.net
+$ yank txt file1.txt
+$ yank txt --secret  # opens your favourite editor.
 
-    cat file1.txt | yank
-    http://localhost:3000/defg
+# other operations
+$ yank ls      # list
+$ yank cp 2    # copy
+$ yank rm 2    # remove
 
-
-To run the server just type this command:
-
-    go run server.go
+# configuration
+$ yank config
+```
 
 
 ## REQUIREMENTS
 
-- Golang
-- and Golang.
+- Rust
+- and Rust.
 
 
 ## TODO
@@ -28,4 +33,3 @@ To run the server just type this command:
 - [ ] create a config.toml to get host and port information.
 - [ ] use basic auth for tcp connection.
 - [ ] use logger instead of println.
-- [ ] create a folder structure for keeping texts and serving them using nginx (or caddy?).
