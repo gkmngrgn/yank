@@ -1,4 +1,8 @@
 use structopt::StructOpt;
+use yank::{
+    client::make_request,
+    server::run_server
+};
 
 #[derive(StructOpt, Debug)]
 struct Opt {
@@ -21,5 +25,15 @@ enum Command {
 
 fn main() {
     let opt = Opt::from_args();
-    println!("{:#?}", opt);
+    match opt.cmd {
+        Some(Command::Server { daemon }) => {
+            run_server();
+        }
+        Some(Command::List { machine }) => {
+            make_request();
+        }
+        None => {
+            println!("{:#?}", opt);
+        }
+    }
 }
